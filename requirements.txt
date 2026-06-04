@@ -1,0 +1,3 @@
+# mail2feishu 无额外 Python 依赖
+# 邮件操作通过 himalaya CLI，飞书推送通过 lark-cli
+# 两者均通过 subprocess 调用，仅需 Python 标准库

@@ -1,0 +1,16 @@
+# 敏感信息
+config.toml
+last_report_ids.json
+seen_ids.json
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# 临时文件
+feishu_*.txt
+feishu_*.json
+himalaya.zip
+himalaya.exe
+himalaya.x86_64-windows.tgz
