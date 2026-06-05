@@ -194,13 +194,13 @@ import smtplib
 from email.mime.text import MIMEText
 from email.header import Header
 
-sender = 'wangyabo@lifetechmed.com'
-# 从Hermes memory读取SMTP密码
-password = 'Ks$y4CW@29vtkZqf'
+sender = 'your_email@lifetechmed.com'
+# 请使用环境变量或安全存储获取密码
+password = os.environ.get('EMAIL_PASSWORD')
 
 def send_email(receiver, subject, content, content_type='plain'):
     message = MIMEText(content, content_type, 'utf-8')
-    message['From'] = Header(f'王亚博 <{sender}>', 'utf-8')
+    message['From'] = Header(f'Your Name <{sender}>', 'utf-8')
     message['To'] = Header(receiver, 'utf-8')
     message['Subject'] = Header(subject, 'utf-8')
     
@@ -223,8 +223,8 @@ from datetime import datetime, timedelta
 # 配置信息
 IMAP_SERVER = 'imap.qiye.163.com'
 IMAP_PORT = 993
-EMAIL = 'wangyabo@lifetechmed.com'
-PASSWORD = 'Ks$y4CW@29vtkZqf'
+EMAIL = 'your_email@lifetechmed.com'
+PASSWORD = os.environ.get('EMAIL_PASSWORD')
 
 def get_recent_emails(days=1, max_count=50):
     """
