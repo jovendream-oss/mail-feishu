@@ -34,6 +34,7 @@ def run_cmd(cmd: list[str], timeout: int = 30) -> tuple[bool, str]:
             timeout=timeout,
             encoding="utf-8",
             errors="replace",
+            shell=True,
         )
         if result.returncode != 0:
             return False, result.stderr.strip() or result.stdout.strip()
